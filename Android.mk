@@ -1,3 +1,5 @@
+ifneq ($(PRODUCT_PLATFORM_SOD),true)
+
 LOCAL_PATH := $(call my-dir)
 # TODO:  Find a better way to separate build configs for ADP vs non-ADP devices
 ifneq ($(TARGET_BOARD_AUTO),true)
@@ -19,3 +21,4 @@ else ifneq ($(wildcard $(LOCAL_PATH)/$(TARGET_BOARD_PLATFORM)),)
 endif
 
 endif
+endif #PRODUCT_PLATFORM_SOD
